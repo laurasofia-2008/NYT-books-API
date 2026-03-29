@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<select id="categorySelect">
+<option value="hardcover-fiction">Hardcover Fiction</option>
+</select>
+
+<button onclick="loadCategory()">Load</button>
+
+<div id="results"></div>
+
+<script>
+const API_KEY = "LoZnZJGk0Nn0tHuzyHZbD6Ex7A32BCo7xIoW4frPS98xTrKJ";
+
+async function loadCategory(){
+
+const res = await fetch(`https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=${API_KEY}`);
+const data = await res.json();
+
+document.getElementById("results").innerHTML = JSON.stringify(data);
+
+}
+</script>
+
+</body>
+</html>

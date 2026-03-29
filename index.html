@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>NYT Books API</title>
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+
+<h1>NYT Books API Explorer</h1>
+
+<div class="menu">
+
+<button onclick="getOverview()">Overview</button>
+<button onclick="getBestSellers()">Best Sellers</button>
+<button onclick="getChildrenBooks()">Children Books</button>
+<button onclick="getNonFiction()">Non Fiction</button>
+<button onclick="getYoungAdult()">Young Adult</button>
+<button onclick="getAdvice()">Business Books</button>
+
+</div>
+
+<!-- Selector de categoría -->
+<h2>Search by Category</h2>
+
+<select id="categorySelect">
+<option value="hardcover-fiction">Hardcover Fiction</option>
+<option value="paperback-nonfiction">Non Fiction</option>
+<option value="childrens-middle-grade-hardcover">Children Books</option>
+<option value="young-adult-hardcover">Young Adult</option>
+<option value="business-books">Business</option>
+</select>
+
+<button onclick="loadCategory()">Load Category</button>
+
+<!-- SOLO UN RESULTS -->
+<div id="results"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
